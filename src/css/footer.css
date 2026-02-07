@@ -1,7 +1,6 @@
 /* --------------Footer---------------- */
 .page-footer {
     background-color: rgb(181, 136, 105);
-    height: 601px;
     padding: 32px 24px;
 }
 .footer-wrapper {
@@ -9,15 +8,25 @@ display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: column;
+gap: 32px;
 background-color: #C29D84;
 border: 1px solid rgba(11, 8, 3, 0.15);
 border-radius: 40px;
 max-width: 288px;
-height: 100%;
+width: 100%;
 margin: 0 auto;
 padding: 32px 24px 24px 24px;
 }
-
+.inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+}
+.logo {
+    margin-bottom: 0;
+}
 footer .logo svg, footer .social-link svg {
     fill: rgb(8, 8, 3);
 }
@@ -26,8 +35,9 @@ footer .logo svg, footer .social-link svg {
     align-items: center;
     justify-content: center;
     gap: 12px;
-    margin-top: 40px;
-    margin-bottom: 32px;
+    margin: 0;
+    /* margin-top: 40px;
+    margin-bottom: 32px; */
 }
 footer .social-link {
     width: 32px;
@@ -64,4 +74,78 @@ footer .nav-list {
     justify-content: center;
     gap: 32px;
     margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+   .page-footer {
+    padding: 24px 16px;
+}
+   .logo svg {
+    width: 63px;
+    height: 36px;
+   }
+   .social-icon{    
+    width: 24px;
+    height: 24px;
+   }
+   .inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+   }
+   .logo {
+    margin-right: 40px;
+   }
+   footer .nav-list {
+    flex-direction: row;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+ }
+   .footer-social-list {
+    justify-content: flex-start;}
+
+   .footer-wrapper {
+    max-width: 704px;
+    width: 100%;
+    padding: 32px 48px;   }
+
+}
+
+@media screen and (min-width: 1158px) {
+   .page-footer {
+    padding: 24px 48px;
+}
+   .footer-wrapper {
+    max-width: 1158px;
+    padding: 32px 48px;
+width: 100%;
+flex-direction: row;
+
+   }
+    footer .nav-list {
+    flex-direction: row;
+    gap: 32px;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+footer .nav-link {
+  white-space: nowrap;
+}
+.inner {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+}
+.logo {
+    margin-right: 24px;
+}
+.footer-social-list {
+       align-items: center;
+    justify-content: flex-start;
+
+}
 }
