@@ -16,6 +16,12 @@ ul {
     box-sizing: border-box;
 }
 
+.quality-wrapper {
+    max-width: 100%;
+    padding: 0 16px;
+    margin: 0 auto;
+}
+
 .quality-container {
     max-width: 100%;
 }
@@ -62,6 +68,8 @@ ul {
 .quality-image {
     border-radius: 32px;
     margin-bottom: 32px;
+    width: 100%;
+    object-fit: cover;
 }
 
 .quality-item-container {
@@ -93,6 +101,11 @@ ul {
         padding: 64px 32px;
     }
 
+    .quality-wrapper {
+        max-width: 768px;
+        padding: 0 32px;
+    }
+
     .quality-container {
         max-width: 704px;
     }
@@ -112,7 +125,7 @@ ul {
         gap: 24px;
     }
 
-    .quality-list li:nth-child(3){
+    .quality-list li:nth-child(3) {
         grid-column: span 2;
     }
 
@@ -128,27 +141,26 @@ ul {
     .quality-list li:nth-child(1) .quality-text {
         max-width: 294px;
     }
-    
+
     .quality-list li:nth-child(2) .quality-text {
         max-width: 340px;
     }
-    
+
     .quality-list li:nth-child(3) .quality-text {
         max-width: 440px;
     }
 
 }
 
-@media (min-width: 1158px) {
+@media (min-width: 1440px) {
+    .quality-wrapper {
+        max-width: 1440px;
+        padding: 0;
+    }
+
     .quality-section {
         padding: 64px;
         box-sizing: border-box;
-    }
-
-    .container {
-        max-width: 1158px;
-        margin: 0 auto;
-        padding: 0;
     }
 
     .quality-container {
@@ -162,7 +174,7 @@ ul {
         max-width: 768px;
         text-align: center;
     }
-    
+
     .quality-section-text {
         max-width: 768px;
         text-align: center;
@@ -174,22 +186,38 @@ ul {
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-between;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .quality-item {
         max-width: 421px;
+        text-align: center;
     }
 
     .quality-title {
-        max-width: 100%;
-        margin-left: auto;
-        margin-right: auto;
+        max-width: 421px;
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .quality-text {
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .quality-list li:nth-child(1) .quality-text {
+        max-width: 421px;
     }
     
-    .quality-text {
-        max-width: 100%;
-        margin-left: auto;
-        margin-right: auto;
+    .quality-list li:nth-child(2) .quality-text {
+        max-width: 421px;
+    }
+    
+    .quality-list li:nth-child(3) .quality-text {
+        max-width: 421px;
     }
 
 }
