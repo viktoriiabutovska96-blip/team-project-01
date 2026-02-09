@@ -28,6 +28,9 @@
 .mob-logo {
     padding: 0 10px;
 }
+.mob-logo svg {
+    fill: #0b0803;
+}
 .mobile-menu-close-btn {
     position: absolute;
     top: 12px;
