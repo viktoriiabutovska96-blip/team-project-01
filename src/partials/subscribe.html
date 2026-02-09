@@ -7,12 +7,45 @@
             </div>
 <form class="subscribe_form">
     <input class="subscribe_input" type="email" placeholder="Your Email Here" required />
-    <button class="subscribe_button" type="submit">Subscribe<svg class="subscribe_icon" width="24" height="24"><use href="./svg/icon-chevrons-right"></use></svg></button>
+    <button class="subscribe_button" type="submit">Subscribe<svg class="subscribe_icon" width="24" height="24"><use href="img/icons.svg#icon-chevrons-right"></use></svg></button>
 </form>
 <p class="subscribe_under_text">By clicking Get Started, you agree to our Terms and Conditions.</p>
         </div>
 <div class="subscribe_image">
-    <img src="./img/subscribe_img.jpg" alt="Coffee Cup" /> <!-- Переправити тут шлях файлу і зробити х2 -->
-    </div>
+    <picture>
+<!-- ========DESCTOp========= -->
+    <source
+      media="(min-width: 1440px)"
+      srcset="
+        /img/subscribe/subscribe-desk.jpg 1x,
+        /img/subscribe/subscribe-desk-2x.jpg 2x
+      "
+    />
+<!-- ==========TABLET========== -->
+    <source
+      media="(min-width: 768px)"
+      srcset="
+        /img/subscribe/subscribe-tab.jpg 1x,
+        /img/subscribe/subscribe-tab-2x.jpg 2x
+      "
+    />
+
+<!-- ============MOBILE========= -->
+    <source
+      srcset="
+        /img/subscribe/subscribe-mob.jpg 1x,
+        /img/subscribe/subscribe-mob-2x.jpg 2x
+      "
+    />
+
+    <img
+      src="/img/subscribe/subscribe-mob.jpg"
+      alt="Coffee Cup"
+      loading="lazy"
+    />
+  </picture>
+</div>
+
+
     </div>
 </section>
