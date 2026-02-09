@@ -1,0 +1,125 @@
+.hero-container {
+    min-width: 320px;
+    max-width: 375px;
+    padding: 108.5px 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../img/hero/hero-mob.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-title {
+    font-family: "Aboreto", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    color: #fff;
+    max-width: 256px;
+    margin-bottom: 24px;
+}
+
+.hero-text {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #fff;
+    max-width: 256px;
+    margin-bottom: 32px;
+}
+
+.learn-more-btn {
+    min-width: 135px;
+    height: 44px;
+    padding: 10px 24px;
+    border-radius: 100px;
+    background: #6f4e37;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fff;
+    box-shadow:
+        0 1px 2px rgba(11, 8, 3, 0.05),
+        inset 0 -2px 1px rgba(0, 0, 0, 0.2),
+        inset 0 0 0 1px rgba(11, 8, 3, 0.15),
+        inset 0 2px 1px rgba(255, 255, 255, 0.25),
+        inset 0 32px 24px rgba(255, 255, 255, 0.05);
+    align-self: flex-start;
+}
+
+.learn-more-btn:hover,
+.learn-more-btn:focus {
+    opacity: 0.5;
+}
+
+.learn-more-btn:active {
+    opacity: 0.2;
+}
+
+@media screen and (min-resolution: 2dppx),
+screen and (-webkit-min-device-pixel-ratio: 2) {
+    .hero {
+        background-image:
+            linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+            url("../img/hero/hero-mob-2x.png");
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .hero-container {
+        max-width: 768px;
+        padding: 311.5px 32px;
+    }
+
+    .hero {
+        background-image:
+            linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+            url("../img/hero/hero-tab.png");
+    }
+
+    .hero-title,
+    .hero-text {
+        max-width: 560px;
+    }
+}
+
+@media screen and (min-width: 768px) and (min-resolution: 2dppx),
+screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+    .hero {
+        background-image:
+            linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+            url("../img/hero/hero-tab-2x.png");
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .hero-container {
+        max-width: 1440px;
+        padding: 259px 64px;
+    }
+
+    .hero {
+        background-image:
+            linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+            url("../img/hero/hero-desk.png");
+    }
+
+    .hero-title {
+        font-size: 56px;
+    }
+}
+
+@media screen and (min-width: 1440px) and (min-resolution: 2dppx),
+screen and (min-width: 1440px) and (-webkit-min-device-pixel-ratio: 2) {
+    .hero {
+        background-image:
+            linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+            url("../img/hero/hero-desk-2x.png");
+    }
+}

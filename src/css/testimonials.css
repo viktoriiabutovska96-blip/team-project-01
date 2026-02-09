@@ -1,0 +1,90 @@
+.testimonial-title {
+    font-family: "Aboreto", sans-serif;
+    font-weight: 400;
+        font-size: 36px;
+        line-height: 1.2;
+        letter-spacing: -0.01em;
+        color: #0b0803;
+        text-align: left;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+}
+
+
+.testimonials-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.testimonials-item {
+    width: 100%;
+    border: 1px solid rgba(11, 8, 3, 0.15);
+    background: #c29d84;
+        border-radius: 32px;
+        display: flex;
+        flex-direction: column;
+        padding: 32px;
+        min-width: 265px;
+}
+
+.testimonials-rating {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 24px;
+}
+
+.rating-icon {
+    fill: #0b0803;
+}
+
+.rating-icon.empty {
+    fill: transparent;
+    stroke:#0b0803;
+    stroke-width: 2px;
+}
+
+.testimonials-text {
+    min-width: 224px;
+}
+
+.testimonials-name {
+   margin-top: 24px;
+    font-weight: 600;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #0b0803;
+}
+
+@media screen and (min-width: 768px) {
+
+    .testimonials-item {
+        width: calc((100% - 24px) / 2);
+        min-height: 253px;
+    }
+
+        .testimonials-text {
+            min-width: 276px;
+        }
+
+       .testimonials-name {
+        margin-top: auto;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .testimonial-title {
+        font-size: 48px;
+        max-width: 416px;
+    }
+
+    .testimonials-item {
+        width: calc((100% - 24px * 3) / 4);
+        min-height: 303px;
+    }
+
+        .testimonials-text {
+            min-width: 246px;
+        }
+
+}

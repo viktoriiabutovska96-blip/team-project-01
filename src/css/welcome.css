@@ -1,0 +1,175 @@
+.welcome-content {
+  width: 100%;
+  max-width: 288px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.welcome {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #0b0803;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-family: 'Aboreto', sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: #0b0803;
+  margin-bottom: 32px;
+}
+
+.description {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #0b0803;
+  margin-bottom: 32px;
+}
+
+.btn {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 12px;
+  border: none;
+  cursor: pointer;
+
+  border-radius: 100px;
+  padding-block: 10px;
+  padding-inline: 24px;
+  width: 288px;
+  height: 44px;
+
+  box-shadow:
+    0 1px 2px 0 rgba(11, 8, 3, 0.05),
+    inset 0 -2px 1px 0 rgba(0, 0, 0, 0.2),
+    inset 0 0 0 1px rgba(11, 8, 3, 0.15),
+    inset 0 2px 1px 0 rgba(255, 255, 255, 0.25),
+    inset 0 32px 24px 0 rgba(255, 255, 255, 0.05);
+  background: #6f4e37;
+  transition: opacity 0.2s ease;
+}
+
+.btn-icon {
+  width: 16px;
+  height: 16px;
+  fill: #fff;
+}
+
+.btn:hover,
+.btn:focus {
+  opacity: 0.5;
+}
+.btn:active {
+  opacity: 0.2;
+}
+
+.img-welcome {
+  width: 288px;
+  height: 162px;
+  margin-top: 32px;
+  border-radius: 40px;
+  overflow: hidden;
+}
+.img-welcome-picture {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.img-welcome-img {
+  object-fit: cover;
+}
+/* -------tablet--------- */
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 64px 32px;
+  }
+
+  .welcome-content {
+    max-width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .welcome-header {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+  }
+
+  .title {
+    width: 336px;
+  }
+  .description {
+    padding-top: 0;
+    width: 336px;
+  }
+  .btn {
+    width: 181px;
+    height: 44px;
+  }
+  .img-welcome {
+    border-radius: 40px;
+    width: 100%;
+    height: 396px;
+  }
+  .img-welcome-picture {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .img-welcome-img {
+    object-fit: cover;
+  }
+}
+
+/*-------desktop---------*/
+
+@media only screen and (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+    padding: 64px;
+  }
+
+  .title {
+    font-size: 48px;
+    width: 640px;
+  }
+  .description {
+    padding-top: 0;
+    margin-bottom: 32px;
+    width: 640px;
+  }
+  .img-welcome {
+    width: 100%;
+    height: 738px;
+    margin-top: 80px;
+  }
+  .img-welcome-picture {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .img-welcome-img {
+    object-fit: cover;
+  }
+}
