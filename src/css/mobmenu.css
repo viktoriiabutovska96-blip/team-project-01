@@ -36,21 +36,25 @@
     top: 12px;
     right: 16px;
     background-color: transparent;
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
     padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     border: none;
     outline: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+}
+.mobile-menu-close-btn:hover,
+.mobile-menu-close-btn:focus {
+    opacity: 0.5;
+}
+.mobile-menu-close-btn:active {
+    opacity: 0.2;
 }
 .mobile-menu-close-btn svg {
    fill: #0b0803;
-}
-.mobile-menu-close-btn:hover svg,
-.mobile-menu-close-btn:focus svg {
-    opacity: 0.5;
 }
 .mobile-menu-nav {
     padding: 0 0 128px 0;
