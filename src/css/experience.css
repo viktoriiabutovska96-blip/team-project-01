@@ -113,10 +113,6 @@
     width: 100%;
   }
 
-  .image-source:last-child {
-    width: 100%;
-  }
-
   .img-item {
     width: 416px;
     object-fit: cover;
@@ -128,5 +124,9 @@
   .list-item:last-child .img-item {
       height: 416px;
       width: 416px;
+  }
+
+  .list-item:nth-child(7) {
+    width: 416px;
   }
 }
