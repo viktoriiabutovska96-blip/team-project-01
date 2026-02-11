@@ -2,6 +2,7 @@
     background-color: #e0cbb4;
     color: #0b0803;
     font-family: "Quicksand", sans-serif;
+    padding: 64px 0px;
 }
 
 .location-container {
@@ -101,7 +102,8 @@
 }
 
 .location-map {
-    width: 288px;
+    width: 100%;
+    max-width: 288px;
     height: 307px;
     margin: 0 auto;
     border-radius: 40px;
@@ -139,7 +141,7 @@
     .location-list {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 40px;
+        gap: 24px;
     }
 
     .location-map {
@@ -151,34 +153,38 @@
 
 @media screen and (min-width: 1440px) {
 
-    .location-title {
-        font-size: 48px;
-    }
-
     .location-container {
-        flex-direction: row;
-        align-items: stretch;
-        gap: 24px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            align-items: stretch;
+            gap: 24px;
+        }
+    
+    
+        .location .container {
+            padding-left: 64px;
+            padding-right: 64px;
+        }
+    
+    
+        .location-list {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+    
+    
+        .location-map {
+            width: 869px;
+            height: 697px;
+            margin: 0;
+    
+        }
+    
+        .location-content {
+            width: 507px;
+            flex-shrink: 0;
+        }
+    
     }
-
-
-    .location .container {
-        padding-left: 64px;
-        padding-right: 64px;
-    }
-
-
-    .location-list {
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-    }
-
-
-    .location-map {
-        width: 869px;
-        height: 697px;
-
-    }
-
-}
