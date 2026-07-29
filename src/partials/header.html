@@ -1,23 +1,60 @@
+<!-- 1. Прихований чекбокс-перемикач (обов'язково перед header та mobile-menu) -->
+<input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox" />
+
+<!-- 2. Шапка сайту -->
 <header class="page-header">
   <div class="header-container">
-        <a class="header-logo" href="./index.html">
-          <svg class="logo-header" width="63" height="36">
-              <use href="/img/icons.svg#icon-logo"></use>
-          </svg>
-        </a>
-        <nav class="header-nav">
-         <ul class="nav-list">
-            <li class="nav-item"><a class="nav-link" href="#About_us">About us</a></li>
-            <li class="nav-item"><a class="nav-link" href="#Benefits">Benefits</a></li>
-            <li class="nav-item"><a class="nav-link" href="#Gallery">Gallery</a></li>
-            <li class="nav-item"><a class="nav-link" href="#Testimonial">Testimonial</a></li>
-            <li class="nav-item"><a class="nav-link" href="#Location">Location</a></li>
-         </ul>
-        </nav>
-    <button type="button" class="menu-button">
-          <svg class="burger-icon" width="24" height="24">
-              <use href="/img/icons.svg#icon-burger"></use>
-          </svg>
-    </button> 
+    <a class="header-logo" href="./index.html">
+      <svg class="logo-header" width="63" height="36">
+        <use href="/img/icons.svg#icon-logo"></use>
+      </svg>
+    </a>
+
+    <nav class="header-nav">
+      <ul class="nav-list">
+        <li class="nav-item"><a class="nav-link" href="#welcome">About us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#quality">Benefits</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#testimonial">Testimonial</a></li>
+        <li class="nav-item"><a class="nav-link" href="#location">Location</a></li>
+      </ul>
+    </nav>
+
+    <!-- Кнопка відкриття мобільного меню (label) -->
+    <label for="menu-toggle" class="menu-button" aria-label="Open menu">
+      <svg class="burger-icon" width="24" height="24">
+        <use href="/img/icons.svg#icon-burger"></use>
+      </svg>
+    </label> 
   </div>
 </header>
+
+<!-- 3. Мобільне меню -->
+<div class="mobile-menu">
+  <div class="mobile-menu-container">
+    <div class="mobil-top">
+      <!-- Кнопка закриття меню (label) -->
+      <label for="menu-toggle" class="mobile-menu-close-btn" aria-label="Close menu">
+        <svg class="close-btn" width="12" height="12">
+          <use href="/img/icons.svg#close-icon"></use>
+        </svg>
+      </label>
+
+      <a class="mob-logo" href="./index.html">
+        <svg width="63" height="36">
+          <use href="/img/icons.svg#icon-logo"></use>
+        </svg>
+      </a>
+    </div>
+
+    <nav class="mobile-menu-nav">
+      <ul class="nav-list">
+        <li class="nav-item"><a class="nav-link" href="#welcome">About us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#quality">Benefits</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#testimonial">Testimonial</a></li>
+        <li class="nav-item"><a class="nav-link" href="#location">Location</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
