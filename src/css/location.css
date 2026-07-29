@@ -1,8 +1,19 @@
-.location {
+/* ==========================================
+   SECTION LOCATION
+   ========================================== */
+
+.section-location {
     background-color: #e0cbb4;
     color: #0b0803;
     font-family: "Quicksand", sans-serif;
-    padding: 64px 0px;
+    padding: 64px 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 375px;
+    padding: 0 16px;
+    margin: 0 auto;
 }
 
 .location-container {
@@ -16,7 +27,6 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 1.5;
-
     margin-bottom: 16px;
     color: #0b0803;
 }
@@ -27,7 +37,6 @@
     font-size: 36px;
     line-height: 1.2;
     letter-spacing: -0.01em;
-
     margin-bottom: 24px;
     color: #0b0803;
 }
@@ -35,7 +44,6 @@
 .location-text {
     font-size: 18px;
     line-height: 1.5;
-
     margin-bottom: 40px;
     color: #0b0803;
 }
@@ -44,17 +52,9 @@
     margin: 0;
     padding: 0;
     list-style: none;
-
     display: flex;
     flex-direction: column;
     gap: 40px;
-}
-
-.container {
-    width: 100%;
-    max-width: 375px;
-    padding: 0 16px;
-    margin: 0 auto;
 }
 
 .email-item,
@@ -69,10 +69,8 @@
     font-size: 20px;
     line-height: 1.4;
     letter-spacing: -0.01em;
-
     margin-top: 16px;
     margin-bottom: 8px;
-
     color: #0b0803;
 }
 
@@ -95,7 +93,6 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
-
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -112,7 +109,6 @@
     height: 307px;
     border-radius: 40px;
     overflow: hidden;
-
 }
 
 .location-map iframe {
@@ -122,82 +118,83 @@
     border: 0;
 }
 
-.location a {
+/* Links & States */
+.section-location a {
     opacity: 1;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.location a:hover,
-.location a:focus-visible {
+.section-location a:hover,
+.section-location a:focus-visible {
     opacity: 0.5;
 }
 
-.location a:active {
+.section-location a:active {
     opacity: 0.7;
 }
 
-.location a.is-inactive {
+.section-location a.is-inactive {
     pointer-events: none;
     opacity: 0.2;
 }
 
+/* ==========================================
+   TABLET (min-width: 768px)
+   ========================================== */
+
 @media screen and (min-width: 768px) {
+    .container {
+        max-width: 768px;
+        padding: 0 32px;
+    }
+
     .location-list {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 40px;
-
-        
     }
-
-    .container {
-        max-width: 768px;
-        }
 
     .location-map {
         width: 100%;
         height: 377px;
     }
-
 }
 
-@media screen and (min-width: 1440px) {
+/* ==========================================
+   DESKTOP (min-width: 1440px)
+   ========================================== */
 
-    .location-container {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
-        align-items: stretch;
-        gap: 24px;
+@media screen and (min-width: 1440px) {
+    .section-location {
+        padding: 100px 0; /* Додано трохи більше відступу зверху та знизу для кращого вигляду */
     }
-    
+
     .container {
         max-width: 1440px;
+        padding: 0 64px;
     }
-    
-    .location .container {
-        padding-left: 64px;
-        padding-right: 64px;
+
+    .location-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
     }
-    
-    
+
+    .location-content {
+        width: 507px;
+        flex-shrink: 0;
+    }
+
     .location-list {
         display: flex;
         flex-direction: column;
         gap: 40px;
     }
-    
-    
+
     .location-map {
-        width: 869px;
-        height: 697px;
-        margin: 0;
-    
-    }
-    
-    .location-content {
-        width: 507px;
+        width: 720px; /* Оптимізована ширина, щоб карта не переповнювала контейнер */
+        height: 600px;
         flex-shrink: 0;
     }
-    
-    }
+}

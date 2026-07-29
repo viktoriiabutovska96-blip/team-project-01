@@ -1,4 +1,22 @@
-/* -----------MOBILE MENU------------ */
+/* ----------- MOBILE MENU SWITCH (NO-JS) ------------ */
+
+/* Приховуємо сам чекбокс */
+.menu-toggle-checkbox {
+  display: none;
+}
+
+/* Стилі для кнопки відкриття бургера в шапці */
+.mobile-menu-open-btn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+}
+
+/* ----------- MOBILE MENU STYLES ------------ */
+
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -9,31 +27,42 @@
   z-index: 999;
   transform: translateY(100%);
   opacity: 0;
-  visibility: visible;
+  visibility: hidden; /* Важливо: hidden в закритому стані */
   pointer-events: none;
   transition:
     opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1),
     transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.mobile-menu.is-open {
+
+/* ГОЛОВНА МАГІЯ: Відкриття меню при натисканні на label (активації чекбокса) */
+.menu-toggle-checkbox:checked ~ .mobile-menu {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  transform: translate(0, 0);
+  transform: translateY(0);
 }
+
 .mobile-menu-container {
   padding: 18px 16px;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
+
+.mobil-top {
+  display: flex;
+  align-items: center;
+}
+
 .mob-logo {
   padding: 0 10px;
 }
+
 .mob-logo svg {
   fill: #0b0803;
 }
+
 .mobile-menu-close-btn {
   position: absolute;
   top: 12px;
@@ -45,20 +74,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: none;
-  outline: none;
+  cursor: pointer;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .mobile-menu-close-btn:hover,
 .mobile-menu-close-btn:focus {
   opacity: 0.5;
 }
+
 .mobile-menu-close-btn:active {
   opacity: 0.2;
 }
+
 .mobile-menu-close-btn svg {
   fill: #0b0803;
 }
+
 .mobile-menu-nav {
   display: flex;
   padding-bottom: 128px;
@@ -66,6 +98,7 @@
   margin-bottom: auto;
   justify-content: center;
 }
+
 .mobile-menu .nav-list {
   display: flex;
   align-items: center;
@@ -73,25 +106,30 @@
   flex-direction: column;
   gap: 32px;
 }
+
 .mobile-menu .nav-link {
-  font-style: var(--font-family);
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   white-space: nowrap;
   color: #0b0803;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .mobile-menu .nav-link:hover,
 .mobile-menu .nav-link:focus {
   opacity: 0.5;
 }
+
 .mobile-menu .nav-link:active {
   opacity: 0.2;
 }
+
+/* Ховаємо мобільне меню та його кнопку відкриття на планшетах і десктопі */
 @media screen and (min-width: 768px) {
-  .mobile-menu {
+  .mobile-menu,
+  .mobile-menu-open-btn {
     display: none;
   }
 }
